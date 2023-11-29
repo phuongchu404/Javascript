@@ -24,14 +24,16 @@ btnRoll.addEventListener("click", function () {
     document.querySelector(`#current--${activePlayer}`).textContent =
       currentScore;
   } else {
-    document
-      .querySelector(`.player--${activePlayer}`)
-      .classList.remove("player--active");
+    // document
+    //   .querySelector(`.player--${activePlayer}`)
+    //   .classList.remove("player--active");
     document.querySelector(`#current--${activePlayer}`).textContent = 0;
     activePlayer = activePlayer === 0 ? 1 : 0;
-    document
-      .querySelector(`.player--${activePlayer}`)
-      .classList.add("player--active");
+    // document
+    //   .querySelector(`.player--${activePlayer}`)
+    //   .classList.add("player--active");
+    player1.classList.toggle("player--active");
+    player2.classList.toggle("player--active");
     currentScore = 0;
   }
 });
@@ -68,8 +70,6 @@ btnNewGame.addEventListener("click", function () {
   player2.classList.remove("player--winner");
   player1.classList.add("player--active");
   player2.classList.remove("player--active");
-  let test = 0;
-  let test2 = 0;
   document.querySelector("#current--0").textContent = 0;
   document.querySelector("#current--1").textContent = 0;
 });

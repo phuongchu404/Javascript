@@ -72,4 +72,5 @@ btnNewGame.addEventListener("click", function () {
   player2.classList.remove("player--active");
   document.querySelector("#current--0").textContent = 0;
   document.querySelector("#current--1").textContent = 0;
+  let test =2;
 });

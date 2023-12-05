@@ -42,14 +42,16 @@ btnHold.addEventListener("click", function () {
     score[activePlayer] += currentScore;
     document.querySelector(`#score--${activePlayer}`).textContent =
       score[activePlayer];
-    document
-      .querySelector(`.player--${activePlayer}`)
-      .classList.remove("player--active");
+    // document
+    //   .querySelector(`.player--${activePlayer}`)
+    //   .classList.remove("player--active");
     document.querySelector(`#current--${activePlayer}`).textContent = 0;
     activePlayer = activePlayer === 0 ? 1 : 0;
-    document
-      .querySelector(`.player--${activePlayer}`)
-      .classList.add("player--active");
+    // document
+    //   .querySelector(`.player--${activePlayer}`)
+    //   .classList.add("player--active");
+    player1.classList.toggle("player--active");
+    player2.classList.toggle("player--active");
     currentScore = 0;
   } else {
     document
